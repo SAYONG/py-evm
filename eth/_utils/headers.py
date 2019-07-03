@@ -66,7 +66,7 @@ def compute_gas_limit(parent_header: BlockHeader, gas_limit_floor: int) -> int:
 
     gas_limit = max(
         GAS_LIMIT_MINIMUM,
-        parent_header.gas_limit - decay + usage_increase
+        parent_header.gas_limit
     )
 
     if gas_limit < GAS_LIMIT_MINIMUM:
